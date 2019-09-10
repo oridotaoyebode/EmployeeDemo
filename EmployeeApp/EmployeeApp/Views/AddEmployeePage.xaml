@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Add New Employee"
+             x:Class="EmployeeApp.Views.AddEmployeePage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Entry Placeholder="First name" Text="{Binding Employee.FirstName, Mode=TwoWay}"></Entry>
+            <Entry Placeholder="Last name" Text="{Binding Employee.LastName, Mode=TwoWay}"></Entry>
+            <Entry Placeholder="Occupation" Text="{Binding Employee.Occupation, Mode=TwoWay}"></Entry>
+            <Entry Placeholder="Email"  Text="{Binding Employee.Email, Mode=TwoWay}"></Entry>
+            <Entry Placeholder="Telephone number"  Text="{Binding Employee.Telephone, Mode=TwoWay}"></Entry>
+
+            <Button Text="Add" BackgroundColor="Blue" TextColor="White" Command="{Binding SaveEmployeeCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
